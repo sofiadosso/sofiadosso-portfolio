@@ -1,9 +1,9 @@
-// Funzione per memorizzare la posizione di scrolling
+// Function to memorize the scrolling position
 function saveScrollPosition() {
     sessionStorage.setItem('scrollPosition', window.scrollY);
 }
 
-// Funzione per ripristinare la posizione di scrolling salvata
+// Function to restore the saved scrolling position
 function restoreScrollPosition() {
     var scrollPosition = sessionStorage.getItem('scrollPosition');
     if (scrollPosition) {
@@ -12,7 +12,7 @@ function restoreScrollPosition() {
     }
 }
 
-// Esegui la funzione per ripristinare la posizione di scrolling quando la pagina è completamente caricata
+// Run the function to restore the scrolling position when the page is fully loaded
 window.addEventListener('load', restoreScrollPosition);
-// Esegui la funzione per salvare la posizione di scrolling quando la pagina sta per essere scaricata
+// Run the function to save the scrolling position when the page is about to be downloaded
 window.addEventListener('beforeunload', saveScrollPosition);
