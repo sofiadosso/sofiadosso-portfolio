@@ -24,7 +24,7 @@ function createParticle() {
     particle.style.top = '-20px'; // Start the fall from above the window
     document.getElementById('particles').appendChild(particle);
 
-    const animationDuration = randomBetween(10, 20); // Durata della caduta casuale tra 10 e 20 secondi
+    const animationDuration = randomBetween(10, 20); // Duration of random fall between 10 and 20 seconds
 
     // Maximum body height
     const bodyHeight = document.body.clientHeight;
