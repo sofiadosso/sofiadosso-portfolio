@@ -2,10 +2,10 @@ const about = document.querySelector('#about')
 const aboutContent = document.querySelector('#about-content')
 
 about.addEventListener('click', () => {
-  // Aggiungi la classe al content-box di "About"
+  // Add the class to the content-box of "About"
   aboutContent.classList.toggle('contentbox-active');
 
-  // Assicurati che il content-box di "Contacts" si chiuda quando si apre quello di "About"
+  // Make sure the content-box for "Contacts" closes when you open the one for "About"
   if (aboutContent.classList.contains('contentbox-active')) {
     blogContent.classList.remove('contentbox-active');
   }
@@ -15,10 +15,10 @@ const blog = document.querySelector('#blog')
 const blogContent = document.querySelector('#blog-content')
 
 blog.addEventListener('click', () => {
-  // Aggiungi la classe al content-box di "Contacts"
+  // Add the class to the content-box of "Contacts"
   blogContent.classList.toggle('contentbox-active');
 
-  // Assicurati che il content-box di "About" si chiuda quando si apre quello di "Contacts"
+  // Make sure that the content-box of "About" closes when you open the one of "Contacts"
   if (blogContent.classList.contains('contentbox-active')) {
     aboutContent.classList.remove('contentbox-active');
   }
