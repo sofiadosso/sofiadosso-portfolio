@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function handleScroll() {
         scrolling = true;
-        cursor.style.opacity = '0'; // rendi il cursore trasparente durante lo scrolling
+        cursor.style.opacity = '0'; // Make the cursor transparent when scrolling
         if (!requestId) {
             requestId = requestAnimationFrame(() => {
                 updateCursor();
@@ -41,14 +41,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function handleMouseMove() {
         if (!videoHovered) {
-            cursor.style.opacity = '1'; // rendi il cursore opaco quando il mouse si muove sulla pagina
+            cursor.style.opacity = '1'; // Make the cursor opaque when the mouse moves across the page
             updateCursor();
         }
     }
 
     document.addEventListener('mousemove', (e) => {
         updateCursorPosition(e);
-        updateCursor(); // Aggiorna il cursore anche durante il movimento del mouse
+        updateCursor(); // Updates the cursor even during mouse movement
     });
 
     window.addEventListener('scroll', handleScroll);
